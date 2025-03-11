@@ -3,6 +3,8 @@ package rocks.zipcodewilmington;
 import org.junit.Assert;
 import org.junit.Test;
 import rocks.zipcodewilmington.animals.Cat;
+import rocks.zipcodewilmington.animals.Animal;
+import rocks.zipcodewilmington.animals.Mammal;
 
 import java.util.Date;
 
@@ -14,9 +16,9 @@ public class CatTest {
     // TODO - Create tests for `speak` **done
     // TODO - Create tests for `setBirthDate(Date birthDate)` **done
     // TODO - Create tests for `void eat(Food food)` **done
-    // TODO - Create tests for `Integer getId()` **
-    // TODO - Create test to check Animal inheritance; google search `java instanceof keyword`
-    // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
+    // TODO - Create tests for `Integer getId()` **done
+    // TODO - Create test to check Animal inheritance; google search `java instanceof keyword` **double check formatting
+    // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword` **double check formatting
 
 
     @Test
@@ -145,12 +147,36 @@ public class CatTest {
         //then
         Assert.assertTrue(3 == numOfMeals);
     }
-
     //check Integer getId()
+    @Test
+    public void test1getCatID() {
+        //given
+        Cat cat = new Cat("Tilda", new Date(), 73);
+        //when
+        Integer retrievedIdNum = cat.getId();
+        //then
+        Assert.assertTrue(73 == retrievedIdNum);
+    }
 
+    @Test
+    public void test2getCatID() {
+        //given
+        Cat cat = new Cat("Zelda", new Date(), 42);
+        //when
+        Integer retrievedIdNum = cat.getId();
+        //then
+        Assert.assertTrue(42 == retrievedIdNum);
+    }
     //check animal inheritance
-
+    @Test
+    public void catCheckAnimalInheritance() {
+        Cat cat = new Cat("Link", new Date(), 38);
+        Assert.assertTrue(cat instanceof Animal);
+    }
     //check mammal inheritance
-
-
+    @Test
+    public void catCheckMammalInheritance() {
+        Cat cat = new Cat("Peach", new Date(), 27);
+        Assert.assertTrue(cat instanceof Mammal);
+    }
 }
