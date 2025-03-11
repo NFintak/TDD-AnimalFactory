@@ -75,7 +75,7 @@ public class CatTest {
     }
     //check speak method
     @Test
-    public void test1speakAndBeHeard() {
+    public void test1speakAndBeHeardCat() {
         //given
         String givenName = "Zuko";
         Date givenBirthDate = new Date();
@@ -127,9 +127,8 @@ public class CatTest {
         //when
         Food dryFood = new Food("Dry food");
         cat.eat(dryFood);
-        Integer numOfMeals = cat.getNumberOfMealsEaten();
         //then
-        Assert.assertTrue(1 == numOfMeals);
+        Assert.assertTrue(1 == cat.getNumberOfMealsEaten());
 
     }
 
@@ -143,9 +142,8 @@ public class CatTest {
         cat.eat(fish);
         cat.eat(dryFood);
         cat.eat(dryFood);
-        Integer numOfMeals = cat.getNumberOfMealsEaten();
         //then
-        Assert.assertTrue(3 == numOfMeals);
+        Assert.assertTrue(3 == cat.getNumberOfMealsEaten());
     }
     //check Integer getId()
     @Test
