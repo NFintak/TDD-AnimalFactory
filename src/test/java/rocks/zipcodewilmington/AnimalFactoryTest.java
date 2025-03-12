@@ -1,7 +1,6 @@
 package rocks.zipcodewilmington;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.Assert;
 import rocks.zipcodewilmington.animals.Cat;
 import rocks.zipcodewilmington.animals.Dog;
@@ -15,8 +14,6 @@ public class AnimalFactoryTest {
     //TODO - Create Test for `Animal createDog(String name, Date birthDate)`
     //TODO - Create Test for `Animal createCat(String name, Date birthDate)`
 
-    //is any set-up needed?
-    @BeforeEach
 
 
     @Test
